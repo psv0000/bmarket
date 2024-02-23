@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load books_tags %}
+
+{% block sidemenu %}
+
+<table class="sidemenu">
+    <tr><td class="sidemenu_title">ФИЛЬТРЫ</td></tr>
+    <tr><td class="sidemenu_sub_title">Авторы</td></tr>
+    <tr><td>{% show_authors %}</td></tr>
+    <tr><td class="sidemenu_title">СОРТИРОВКА</td></tr>
+    <tr><td><select class="custom_select" onchange="location = this.value" autofocus>
+        {% if request.GET.q %}
+            <option selected disabled=""></option>
+            <option value="?q={{ request.GET.q }}&order_by">По умолчанию</option>
+            <option value="?q={{ request.GET.q }}&order_by=price">От дешевых к дорогим</option>
+            <option value="?q={{ request.GET.q }}&order_by=-price">От дорогих к дешевым</option>
+        {% else %}
+            <option selected disabled=""></option>
+            <option value="?order_by">По умолчанию</option>
+            <option value="?order_by=price">От дешевых к дорогим</option>
+            <option value="?order_by=-price">От дорогих к дешевым</option>
+        {% endif %}
+        </select>
+    </td></tr>
+</table>
+
+{% endblock %}
+
+{% block content %}
+
+{% include 'books/includes/books_table.html' %}
+
+{% endblock %}

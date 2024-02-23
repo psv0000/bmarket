@@ -1,0 +1,119 @@
+[
+{
+  "model": "books.books",
+  "pk": 1,
+  "fields": {
+    "title": "Преступление и наказание",
+    "slug": "prestuplenie-i-nakazanie",
+    "description": "",
+    "image": "images/1.jpg",
+    "amount": 10,
+    "price": 15,
+    "author": 1
+  }
+},
+{
+  "model": "books.books",
+  "pk": 2,
+  "fields": {
+    "title": "Идиот",
+    "slug": "idiot",
+    "description": "",
+    "image": "images/2.jpg",
+    "amount": 10,
+    "price": 10,
+    "author": 1
+  }
+},
+{
+  "model": "books.books",
+  "pk": 3,
+  "fields": {
+    "title": "Братья Карамазовы",
+    "slug": "bratia-karamazovy",
+    "description": "",
+    "image": "images/3.jpg",
+    "amount": 10,
+    "price": 20,
+    "author": 1
+  }
+},
+{
+  "model": "books.books",
+  "pk": 4,
+  "fields": {
+    "title": "Доктор Живаго",
+    "slug": "doktor-zhivago",
+    "description": "",
+    "image": "images/4.jpg",
+    "amount": 10,
+    "price": 15,
+    "author": 2
+  }
+},
+{
+  "model": "books.books",
+  "pk": 5,
+  "fields": {
+    "title": "Дети капитана Гранта",
+    "slug": "deti-kapitana-granta",
+    "description": "",
+    "image": "images/5.jpg",
+    "amount": 10,
+    "price": 15,
+    "author": 3
+  }
+},
+{
+  "model": "books.books",
+  "pk": 6,
+  "fields": {
+    "title": "Мастер и Маргарита",
+    "slug": "master-i-margarita",
+    "description": "",
+    "image": "images/6.jpg",
+    "amount": 10,
+    "price": 55,
+    "author": 4
+  }
+},
+{
+  "model": "books.books",
+  "pk": 7,
+  "fields": {
+    "title": "Анна Каренина",
+    "slug": "anna-karenina",
+    "description": "",
+    "image": "images/7.jpg",
+    "amount": 10,
+    "price": 25,
+    "author": 5
+  }
+},
+{
+  "model": "books.books",
+  "pk": 8,
+  "fields": {
+    "title": "Бесы",
+    "slug": "besy",
+    "description": "",
+    "image": "images/8.jpg",
+    "amount": 10,
+    "price": 5,
+    "author": 1
+  }
+},
+{
+  "model": "books.books",
+  "pk": 9,
+  "fields": {
+    "title": "Собачье сердце",
+    "slug": "sobache-serdtse",
+    "description": "",
+    "image": "images/9.jpg",
+    "amount": 10,
+    "price": 20,
+    "author": 4
+  }
+}
+]

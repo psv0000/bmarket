@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load carts_tags %}
+
+{% block content %}
+
+{% user_carts request as carts %}
+<div class="cart">
+<h1>Корзина</h1>
+{% for cart in carts %}
+    <h4>{{ cart.item.title }}</h4>
+    <ul>
+        <li>
+            <div>
+                {% if cart.quantity > 1 %}
+                    <form action="{% url 'cart:reduce_cart_item' cart.id %}" class="cart_button_form">
+                        <button type="submit">-</button>
+                    </form>
+                {% endif %}
+                    {{ cart.quantity }}
+                <form action="{% url 'cart:add_cart_item' cart.id %}" class="cart_button_form">
+                <button type="submit">+</button>
+                </form>
+                x {{ cart.item.price }} =
+                {{cart.item_price}} У.Е.
+                <a href="{% url 'cart:cart_remove' cart.id %}" class="cart_delete">Удалить</a>
+            </div>
+        </li>
+    </ul>
+{% endfor %}
+
+Итого <strong>{{ carts.total_quantity }}</strong> ед. товар(а) на сумму <strong>{{ carts.total_price }} У.Е.</strong>
+
+{% if carts %}
+<form action="{% url 'cart:create_order' %}" class="cart_confirm" method="post">
+    {% csrf_token %}
+    <button class="cart_confirm" >Оформить заказ</button>
+</form>
+</div>
+{% endif %}
+
+{% endblock %}

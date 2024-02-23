@@ -1,0 +1,399 @@
+body {
+    background: #c0dfc2;
+    margin: 0;
+	padding: 0;
+}
+
+.mainmenu_table {
+    width: 100%;
+	background: #64ac8f;
+	height: 60px;
+}
+
+.mainmenu {
+    font-family: 'Trebuchet MS';
+    font-size: 25px;
+    list-style: none;
+    margin: 0;
+	padding: 0;
+}
+
+.mainmenu li a {
+    text-decoration: none;
+    color: #e7f5dc;
+}
+
+ul.mainmenu {
+    color: #e7f5dc;
+}
+
+.links_left {
+    float: left;
+    margin: 0 20px 0 30px;
+}
+
+.links_right {
+    float: right;
+    margin: 0 20px 0 30px;
+}
+
+.search_field {
+    margin-left: 40%;
+    display: flex;
+}
+
+.search_field input {
+    border: none;
+    background-color: #e7f5dc;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    width: 350px;
+}
+
+.search_field button {
+    background-color: #e7f5dc;
+    padding: 1px 5px;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    border: none;
+}
+
+.search_field button:hover {
+    background-color: #94d6ba;
+}
+
+.footer_table {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: #4b6154;
+}
+
+.footer_text {
+    margin: 0 0 0 30px;
+	color: #e7f5dc;
+    font-family: 'Trebuchet MS';
+    font-size: 15px;
+}
+
+.item h1 {
+    font-family: 'Trebuchet MS';
+    font-size: 24px;
+    margin-left: 46%;
+}
+
+.item h2 {
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    margin-left: 46%;
+}
+
+.item img {
+    float: left;
+    margin-left: 30%;
+    max-width: 300px;
+}
+
+.item_button {
+    background-color: #64ac8f;
+    padding: 5px 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    margin: 0 0 0 25px;
+}
+
+.item_button:hover {
+    background-color: #c0dfc2;
+}
+
+.book_table {
+    margin: auto;
+    padding: 10px 30px 15px 30px;
+    width: 170px;
+    vertical-align: top;
+}
+
+.book_table a {
+    text-decoration: none;
+}
+
+.book_image {
+    max-width: 170px;
+}
+
+.book_price {
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    font-style: italic;
+    color: #172224;
+    text-align: center;
+    padding: 15px;
+}
+
+.book_title {
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    color: #172224;
+    vertical-align: middle;
+    text-align: center;
+    word-break: normal;
+    height: 50px;
+    margin: 0;
+}
+
+.book_table button {
+    background-color: #64ac8f;
+    padding: 5px 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.book_table button:hover {
+    background-color: #c0dfc2;
+}
+
+.sidemenu {
+    background: #94d6ba;
+    position: absolute;
+    left: 0;
+    margin: 5px 0 0 0;
+    width: 250px;
+}
+
+.sidemenu tr {
+    font-family: 'Trebuchet MS';
+    font-size: 22px;
+    color: #172224;
+    vertical-align: top;
+    text-align: center;
+}
+
+.sidemenu_title {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 0 15px 0;
+}
+
+.sidemenu_sub_title {
+    font-style: italic;
+    padding: 0 0 5px 0;
+}
+
+.custom_select {
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    background-color: #64ac8f;
+    color: #172224;
+    padding: 10px 8px;
+    border: none;
+    margin: 0 0 20px 0;
+}
+
+.custom_select p {
+    font-size: 10px;
+}
+
+.pagination {
+	text-align: center;
+	margin: 0 35px 50px 0;
+}
+
+.pagination a {
+	font-family: 'Trebuchet MS';
+	font-size: 22px;
+	color: black;
+	text-decoration: none;
+}
+
+.pagination_numbers, .pagination_numbers_selected {
+    background-color: #64ac8f;
+	display: inline-block;
+	width: 60px;
+	height: 44px;
+	padding: 16px 0 0 0;
+	border: 3px solid #4b6154;
+	border-radius: 20px;
+}
+
+.pagination_numbers:hover {
+    background-color: #c0dfc2;
+}
+
+.pagination_numbers_selected {
+	border: none;
+	font-family: 'Trebuchet MS';
+	font-size: 22px;
+	color: black;
+}
+.form {
+    margin-left: 40%;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.form_r_d {
+    margin-left: 10%;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.form_p_r_con {
+    margin-left: 32%;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.form_p_r_con a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    color: #4b6154;
+}
+
+.form a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    color: #4b6154;
+}
+
+.form input {
+    width: 250px;
+    font-size: 18px;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+}
+
+.form_label_l {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.form_label_r {
+    display: inline-block;
+    min-width: 170px;
+}
+
+.form_label_p {
+    display: inline-block;
+    min-width: 150px;
+}
+
+.form_label_p_c {
+    display: inline-block;
+    min-width: 220px;
+}
+
+.form_label_p_r_f {
+    display: inline-block;
+    min-width: 250px;
+}
+
+.form_label_p_r_con {
+    display: inline-block;
+    min-width: 280px;
+}
+
+.form_error ul {
+    list-style: none;
+    color: #CC0000;
+    padding: 0;
+}
+
+.form button {
+    background-color: #64ac8f;
+    padding: 5px 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.form button:hover {
+    background-color: #c0dfc2;
+}
+
+.links_right button {
+    background-color: #64ac8f;
+    border: none;
+    font-family: 'Trebuchet MS';
+    color: #e7f5dc;
+    font-size: 25px;
+    padding: 0;
+}
+
+.cart {
+    margin-left: 40%;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.cart ul {
+    padding: 0;
+}
+
+.cart li {
+    list-style: none;
+}
+
+.cart h4 {
+    margin: 0 0 -10px 0;
+}
+
+.cart_button_form {
+    width: 25px;
+    display: inline-block;
+}
+
+.cart button {
+    background-color: #64ac8f;
+    padding: 1px 5px;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.cart button:hover {
+    background-color: #c0dfc2;
+}
+
+.cart input {
+    width: 30px;
+    height: 24px;
+    font-size: 18px;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+}
+
+.cart_confirm button {
+    background-color: #64ac8f;
+    padding: 5px 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    margin: 15px 0 0 0;
+}
+
+.cart_confirm:hover {
+    background-color: #c0dfc2;
+}
+
+.cart_delete {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    color: #4b6154;
+    padding: 0 0 0 5px;
+}
+
+.order_complete {
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}
+
+.validation_error {
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+}

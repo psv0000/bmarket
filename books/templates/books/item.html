@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="item">
+{% if item.image %}
+    <p><img class='item_image' src="{{ item.image.url }}"></p>
+{% endif %}
+<h1>{{ item.title }}</h1>
+<h2>{{ item.author.name.0 }}. {{ item.author.middle_name.0 }}. {{ item.author.last_name }}</h2>
+<h2>{{ item.description }}</h2>
+<form action="{% url 'cart:cart_add' item.slug %}"><button type="submit" class="item_button">Добавить в корзину</button></form>
+</div>
+
+{% endblock %}

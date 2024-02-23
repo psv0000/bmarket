@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ title }} </title>
+    <link type="text/css" href="{% static 'books/css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+<table class="mainmenu_table">
+    <tr><td>
+            <ul class="mainmenu">
+                {% for m in mainmenu %}
+                    {% if forloop.counter0 < 2 %}
+                        <li class="links_left"><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                    {% else %}
+                        <li class="links_right"><a href="{% url 'cart:details' %}">{{ m.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if user.is_authenticated %}
+                    <form action="{% url 'users:logout' %}" method="post">
+                        {% csrf_token %}
+                        <li class="links_right"><a href="{% url 'users:profile' %}">{{user.username}}</a> |
+                            <button type="submit">Выйти</button></li>
+                    </form>
+                {% else %}
+                    <li class="links_right"><a href="{% url 'users:login' %}">Войти</a> |
+                        <a href="{% url 'users:register' %}">Регистрация</a></li>
+                {% endif %}
+                <li>
+                <form class="search_field" action="{% url 'search' %}" method="get" >
+                    <input type="search" name="q" placeholder="Поиск по сайту">
+                    <button type="submit">Поиск</button>
+                </form>
+                </li>
+            </ul>
+    </td></tr>
+</table>
+{% block sidemenu %}
+{% endblock %}
+{% block content %}
+{% endblock %}
+{% block navigation %}
+{% endblock %}
+<table class="footer_table">
+    <tr><td>
+        <div class="footer_text">Сайт создан в учебных целях</div>
+    </td></tr>
+</table>
+</body>
+</html>

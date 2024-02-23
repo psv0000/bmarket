@@ -1,0 +1,7 @@
+<select class="custom_select" onchange="location = this.value">
+<option selected disabled>Выбрать автора</option>
+<option value="{% url 'catalog' %}">Все авторы</option>
+{% for author in authors %}
+    <option value="{{ author.get_absolute_url }}">{{ author.last_name }}</option>
+{% endfor %}
+</select>

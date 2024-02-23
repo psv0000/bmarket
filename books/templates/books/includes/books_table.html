@@ -1,0 +1,61 @@
+{% load books_tags %}
+
+<table class="book_table">
+    <tr class="book_table">
+        {% for i in items %}
+            {% if forloop.counter0|divisibleby:'3' %}
+                {% if i.image %}
+                    <tr class="book_table">
+                        <td class="book_table">
+                            <table class="book_table">
+                                <tr><td><a href="{% url 'item' i.slug %}"><img class="book_image" src="{{ i.image.url }}"></a></td></tr>
+                                <tr><td class="book_price">{{ i.price }} У.Е.</td></tr>
+                                <tr><td><a href="{% url 'item' i.slug %}"><p class="book_title">{{ i.title }}</p></a></td></tr>
+                                <tr><td><form action="{% url 'cart:cart_add' i.slug %}"><button type="submit">Добавить в корзину</button></form></td></tr>
+                            </table>
+                        </td>
+                {% endif %}
+            {% else %}
+                {% if i.image %}
+                    <td class="book_table">
+                        <table class="book_table">
+                            <tr><td><a href="{% url 'item' i.slug %}"><img class="book_image" src="{{ i.image.url }}"></a></td></tr>
+                            <tr><td class="book_price">{{ i.price }} У.Е.</td></tr>
+                            <tr><td><a href="{% url 'item' i.slug %}"><p class="book_title">{{ i.title }}</p></a></td></tr>
+                            <tr><td><form action="{% url 'cart:cart_add' i.slug %}"><button type="submit">Добавить в корзину</button></form></td></tr>
+                        </table>
+                    </td>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </tr>
+</table>
+{% block navigation %}
+{% if page_obj.has_other_pages %}
+<nav class="pagination">
+    <ul>
+		{% if page_obj.has_previous %}
+            <li class="pagination_numbers">
+                <a href="?{% change_params page=page_obj.previous_page_number %}">&lt;</a>
+            </li>
+		{% endif %}
+
+        {% for p in paginator.page_range %}
+            {% if page_obj.number == p %}
+                <li class="pagination_numbers_selected">{{ p }}</li>
+            {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+                <li class="pagination_numbers">
+                    <a href="?{% change_params page=p %}">{{ p }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+		{% if page_obj.has_next %}
+            <li class="pagination_numbers">
+                <a href="?{% change_params page=page_obj.next_page_number %}">&gt</a>
+            </li>
+		{% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,52 @@
+[
+{
+  "model": "books.authors",
+  "pk": 1,
+  "fields": {
+    "name": "Федор",
+    "middle_name": "Михайлович",
+    "last_name": "Достоевский",
+    "slug": "dostoevskii"
+  }
+},
+{
+  "model": "books.authors",
+  "pk": 2,
+  "fields": {
+    "name": "Борис",
+    "middle_name": "Леонидович",
+    "last_name": "Пастернак",
+    "slug": "pasternak"
+  }
+},
+{
+  "model": "books.authors",
+  "pk": 3,
+  "fields": {
+    "name": "Жюль",
+    "middle_name": "Габриель",
+    "last_name": "Верн",
+    "slug": "vern"
+  }
+},
+{
+  "model": "books.authors",
+  "pk": 4,
+  "fields": {
+    "name": "Михаил",
+    "middle_name": "Афанасьевич",
+    "last_name": "Булгаков",
+    "slug": "bulgakov"
+  }
+},
+{
+  "model": "books.authors",
+  "pk": 5,
+  "fields": {
+    "name": "Лев",
+    "middle_name": "Николаевич",
+    "last_name": "Толстой",
+    "slug": "tolstoi"
+  }
+}
+]
